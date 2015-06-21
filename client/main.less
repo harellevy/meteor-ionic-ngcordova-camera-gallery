@@ -1,0 +1,44 @@
+/* CSS declarations go here */
+.page-container {
+  &:after {
+//    content:'';
+//    position:fixed;
+//    top:44px;
+//    bottom:0;
+//    left:0;
+//    right:0;
+//    background-color:#000;
+//    -moz-opacity:0;
+//    -ms-opacity:0;
+//    opacity:0;
+//    -webkit-transition:opacity 400ms;
+//    -moz-transition:opacity 400ms;
+//    -ms-transition:opacity 400ms;
+//    -o-transition:opacity 400ms;
+//    transition:opacity 400ms;
+  }
+}
+.menu-open {
+  .page-container {
+    &:after {
+      content:'';
+      position:fixed;
+      top:44px;
+      bottom:0;
+      left:0;
+      right:0;
+      background-color:#000;
+      -moz-opacity:0.4;
+      -ms-opacity:0.4;
+      opacity:0.4;
+    }
+  }
+}
+.card-list-container {
+  .card-list-item {
+	padding:0;
+    &.item {
+      border:none;
+    }
+  }
+}
