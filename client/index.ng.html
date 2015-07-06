@@ -1,5 +1,4 @@
 <ion-side-menus ng-controller="WrapperCtrl">
-
 	<!-- Center content -->
 	<ion-pane ion-side-menu-content>
 		<ion-header-bar class="bar bar-header bar-dark">
@@ -12,6 +11,19 @@
 				<i class="icon ion-compose"></i>
 			</button>
 		</ion-header-bar>
+		<script id="login-template.ng.html" type="text/ng-template">
+			<ion-modal-view>
+				<ion-header-bar class="bar-header bar-positive">
+					<h1 class="title">Login</h1>
+					<button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+				</ion-header-bar>
+				<ion-content>
+					<div class="padding">
+						<meteor-include src="atForm"></meteor-include>
+					</div>
+				</ion-content>
+			</ion-modal-view>
+		</script>
 		<ng-include src="'client/components/footer-tabs/footer-tabs.ng.html'"></ng-include>
 	</ion-pane>
 
@@ -21,11 +33,7 @@
 			<h1 class="title">Profile Settings</h1>
 		</ion-header-bar>
 		<ion-content has-header="true" scroll="true">
-			<ion-list>
-				<ion-item ng-repeat="project in Projects" ng-click="selectProject(project, $index)" ng-class="{active: project.active}">
-					{{project.title}}
-				</ion-item>
-			</ion-list>
+			<ng-include src="'client/components/menus/profile-side-menu.ng.html'"></ng-include>
 		</ion-content>
 	</ion-side-menu>
 

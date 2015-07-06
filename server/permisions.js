@@ -1,5 +1,5 @@
 
-Projects.allow({
+Guides.allow({
 	insert: function () {
 		return true;
 	},

@@ -1,2 +1,3 @@
-Projects = new Meteor.Collection("Projects");
+Guides = new Meteor.Collection("Guides");
 Tasks = new Meteor.Collection("Tasks");
+

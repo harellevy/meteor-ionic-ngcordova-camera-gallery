@@ -1,0 +1,15 @@
+<ion-view view-title="Settings">
+	<ion-content class="page-container" has-header="true" scroll="true">
+		<div class="list">
+			<div class="item">
+				<label for="at-btn">Account:</label>
+				<button ng-if="signOutBtn" ng-click="logout()" type="submit" class="at-btn button button-positive button-block submit" id="at-btn">
+					Sign Out
+				</button>
+				<button ng-if="loginBtn" ng-click="logout()" type="submit" class="at-btn button button-positive button-block submit" id="at-btn">
+					Login
+				</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
