@@ -1,5 +1,4 @@
 Meteor.startup(function () {
-	if (Guides.find().count() === 0) {
 		var guides = [
 			{
 				"requirements": [
@@ -118,7 +117,7 @@ Meteor.startup(function () {
 		];
 
 
-		for (var i = 0; i < guides.length; i++)
+		for (var i = 0; i < guides.length; i++) {
 			Guides.insert({
 				title: guides[i].title,
 				mainTag: guides[i].mainTag,
@@ -134,6 +133,5 @@ Meteor.startup(function () {
 				languages: guides[i].languages,
 				fullGuide: guides[i].fullGuide
 			});
-
 	}
 });

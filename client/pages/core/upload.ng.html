@@ -3,13 +3,17 @@
     <div class="list">
       <div class="item">
 				<script type="text/javascript" src="//api.filepicker.io/v2/filepicker.js"></script>
-				<input class="button" type="filepicker" data-fp-apikey="A4g8hir8GTpSQFztmhrPBz" data-fp-mimetypes="video/*" data-fp-container="modal" data-fp-services="DROPBOX,GOOGLE_DRIVE,GMAIL,SKYDRIVE,VIDEO,FTP" onchange="alert(event.fpfile.url)">
-				<a class="button" ng-click="takeVideo()">upload video</a>
-				<a class="Create video player from last video selected" ng-click="createVideoTag('.video',playingVideo)">try video, state: {{videoState}}</a>
-				<div class="video">
+				<input class="button button-positive button-block" type="filepicker" data-fp-apikey="A4g8hir8GTpSQFztmhrPBz" data-fp-mimetypes="video/*" data-fp-container="modal" data-fp-services="DROPBOX,GOOGLE_DRIVE,GMAIL,SKYDRIVE,VIDEO,FTP" onchange="alert(event.fpfile.url)">
+				<a class="button button-positive button-block" ng-click="takeVideo()">upload video</a>
+				<a class="button button-positive button-block" ng-click="createVideoTag('.video',playingVideo)">try video, state: {{videoState}}</a>
+				<div class="video" ng-repeat="video in videos">
+					<video controls="controls" preload="metadata" autoplay="autoplay" webkit-playsinline="webkit-playsinline" class="videoPlayer"><source ng-src="video.src" type="video/mp4"/></video>
 				</div>
         <p>{{playingVideo}}</p>
       </div>
+			<div id="success"></div>
+      <b>Error Response:</b>
+			<div id="error"></div>
       <label class="item item-input item-floating-label">
         <span class="input-label">How to video title</span>
         <input type="text" placeholder="How to tie a tie" prefix="how to..">

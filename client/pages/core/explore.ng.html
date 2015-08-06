@@ -1,7 +1,8 @@
 <ion-view view-title="Explore">
 	<ion-content class="page-container" has-header="true" scroll="true">
+		123123123
 		<ion-list class="card-list-container">
-			<ion-item class="card-list-item" collection-repeat="guide in Guides" collection-item-height="140">
+			<ion-item class="card-list-item" collection-repeat="guide in guides" collection-item-height="140">
 				<div class="card">
 					<div class="item item-divider">
 						{{guide.title}}
@@ -10,15 +11,11 @@
 						This is a basic Card with some text.
 					</div>
 					<div class="item item-divider">
-						{{guide.owener}}
+						Dif: {{guide.difficulty}}
+						Rate: {{guide.rating.ratingAvg}}
 					</div>
 				</div>
 			</ion-item>
 		</ion-list>
-		<!--<ion-list>-->
-			<!--<ion-item ng-repeat="guide in Guides" ng-click="selectProject(guide, $index)" ng-class="{active: guide.active}">-->
-				<!--{{guide.title}}-->
-			<!--</ion-item>-->
-		<!--</ion-list>-->
 	</ion-content>
 </ion-view>
